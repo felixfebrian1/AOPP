@@ -1,0 +1,50 @@
+interface daging{
+	void daging();
+}
+
+interface telur{
+	void telur();
+}
+
+abstract class binatang implements daging, telur{
+	
+}
+
+class hiu extends binatang
+{
+	public void daging()
+	{
+		System.out.println("Ini hiu");
+		System.out.println("diambil dagingnya saja");
+	}
+	public void telur(){		
+	}
+}
+
+class ayam extends binatang
+{
+	public void daging()
+	{
+		System.out.println("ini ayam");
+		System.out.print("bisa di ambil dagingnya");
+	}
+	public void telur()
+	{
+		System.out.println(" dan bisa diambil telur nya");
+	}
+}
+
+
+
+public class Main {
+	
+	public static void main(String[] args)
+	{
+		ayam a = new ayam();
+		a.daging();
+		a.telur();
+		
+		hiu h = new hiu();
+		h.daging();
+	}
+}
